@@ -1,0 +1,35 @@
+let numberValue = document.getElementById("counterValue");
+
+function onIncrement(){
+    let previousValue = numberValue.textContent;
+    let updateValue = parseInt(previousValue) + 1;
+    if(updateValue > 0){
+        numberValue.style.color = "green";
+    }
+    else if(updateValue < 0){
+        numberValue.style.color = "red";
+    }
+    else{
+        numberValue.style.color = "black";
+    }
+    numberValue.textContent = updateValue;
+}
+function onDecrement(){
+    let previousValue = numberValue.textContent;
+    let updateValue = previousValue - 1;
+    numberValue.textContent = updateValue;
+    if(updateValue > 0){
+        numberValue.style.color = "green";
+    }
+    else if(updateValue < 0){
+        numberValue.style.color = "red";
+    }
+    else{
+        numberValue.style.color = "black";
+    }
+}
+function onReset(){
+    let resetValue = 0;
+    numberValue.style.color = "black";
+    numberValue.textContent = resetValue;
+}
